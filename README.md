@@ -23,6 +23,7 @@
 
 ## 📣 News
 - [25-10-24] 🔥 We initially released the paper and project.
+- [26-02-21] 🔥 Congratulations on the acceptance of AnyPcc to CVPR 2026!
 
 ## Todo
 - [ ] Release inference code
