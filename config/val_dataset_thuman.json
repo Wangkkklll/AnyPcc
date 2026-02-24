@@ -1,0 +1,20 @@
+{
+  "datasets": [
+    {
+      "name": "thuman_val",
+      "type": "8i",
+      "data_dirs": [
+        "/data2/wkl/pcc_data/model"
+      ],
+      "file_pattern": "**/pcd_0.ply",
+      "is_pre_quantized": true,
+      "posQ": 1,
+      "split_mode": "range",
+      "split_range": [
+        500,
+        520
+      ],
+      "max_samples": 10
+    }
+  ]
+}

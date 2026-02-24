@@ -1,0 +1,83 @@
+{
+  "datasets": [
+    {
+      "name": "8i_val",
+      "type": "8i",
+      "data_dirs": [
+        "/data2/wkl/pcc_data/8i5"
+      ],
+      "file_pattern": "*.ply",
+      "is_pre_quantized": true,
+      "posQ": 1,
+      "max_samples": 20
+    },
+    {
+      "name": "ford_val",
+      "type": "8i",
+      "data_dirs": [
+        "/data2/wkl/pcc_data/ford/ford_03_first",
+        "/data2/wkl/pcc_data/ford/ford_03_second"
+      ],
+      "file_pattern": "*.ply",
+      "is_pre_quantized": true,
+      "posQ": 4,
+      "max_samples": 20
+    },
+    {
+      "name": "gs_val",
+      "type": "8i",
+      "data_dirs": [
+        "/data2/wkl/pcc_data/gs_pcc/testset/quantized"
+      ],
+      "file_pattern": "*.ply",
+      "is_pre_quantized": true,
+      "posQ": 1,
+      "max_samples": 20
+    },
+    {
+      "name": "scannet_val",
+      "type": "scannet",
+      "data_dirs": [
+        "/data2/wkl/pcc_data/scannet/scans_test"
+      ],
+      "file_pattern": "**/*_vh_clean_2.ply",
+      "is_pre_quantized": false,
+      "posQ": 1,
+      "max_samples": 10,
+      "preprocess_scale": 50
+    },
+    {
+      "name": "thuman_val",
+      "type": "8i",
+      "data_dirs": [
+        "/data2/wkl/pcc_data/model"
+      ],
+      "file_pattern": "**/pcd_0.ply",
+      "is_pre_quantized": true,
+      "posQ": 1,
+      "split_mode": "range",
+      "split_range": [
+        500,
+        520
+      ],
+      "max_samples": 10
+    },
+    {
+      "name": "kitti_val",
+      "type": "kitti",
+      "data_dirs": [
+        "/data2/wkl/pcc_data/sequences"
+      ],
+      "file_pattern": "**/velodyne/*.bin",
+      "is_pre_quantized": false,
+      "posQ": 4,
+      "split_mode": "sequence_split",
+      "split_range": [
+        11,
+        21
+      ],
+      "max_samples": 20,
+      "preprocess_scale": 1000
+    }
+  ]
+}

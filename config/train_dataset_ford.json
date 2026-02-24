@@ -1,0 +1,19 @@
+{
+  "datasets": [
+    {
+      "name": "ford_train",
+      "type": "8i",
+      "data_dirs": [
+        "/data2/wkl/pcc_data/ford/ford_01_first",
+        "/data2/wkl/pcc_data/ford/ford_01_second"
+      ],
+      "file_pattern": "*.ply",
+      "is_pre_quantized": true,
+      "posQ": 4,
+      "sampling_weight": 1.0,
+      "use_patch": true,
+      "max_num": 200000,
+      "shift_range": 2.0
+    }
+  ]
+}

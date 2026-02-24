@@ -1,0 +1,22 @@
+{
+  "datasets": [
+    {
+      "name": "8i_train",
+      "type": "8i",
+      "data_dirs": [
+        "/data2/wkl/pcc_data/Cat3A/longdress",
+        "/data2/wkl/pcc_data/Cat3A/soldier",
+        "/data2/wkl/pcc_data/MVUB/andrew10/ply",
+        "/data2/wkl/pcc_data/MVUB/david10/ply",
+        "/data2/wkl/pcc_data/MVUB/sarah10/ply"
+      ],
+      "file_pattern": "*.ply",
+      "is_pre_quantized": true,
+      "posQ": 1,
+      "sampling_weight": 2.5,
+      "use_patch": true,
+      "max_num": 400000,
+      "shift_range": 1.0
+    }
+  ]
+}

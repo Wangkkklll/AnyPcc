@@ -1,0 +1,23 @@
+{
+  "datasets": [
+    {
+      "name": "thuman_train",
+      "type": "8i",
+      "data_dirs": [
+        "/data2/wkl/pcc_data/model"
+      ],
+      "file_pattern": "**/pcd_0.ply",
+      "is_pre_quantized": true,
+      "posQ": 1,
+      "split_mode": "range",
+      "split_range": [
+        0,
+        500
+      ],
+      "sampling_weight": 1.0,
+      "use_patch": true,
+      "max_num": 400000,
+      "shift_range": 1.0
+    }
+  ]
+}

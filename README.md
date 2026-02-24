@@ -24,11 +24,10 @@
 ## 📣 News
 - [25-10-24] 🔥 We initially released the paper and project.
 - [26-02-21] 🔥 Congratulations on the acceptance of AnyPcc to CVPR 2026!
+- [26-02-24] 🔥 Complete training and testing code and pre-trained checkpoint of AnyPcc have been released. check it out！
 
 ## Todo
-- [ ] Release inference code
-- [ ] Release training code
-- [ ] Release all dataset
+- Release all dataset
 
 ## Links
 Our work on point cloud or 3DGS compression has also been released. Welcome to check it.
@@ -46,7 +45,81 @@ Generalization remains a critical challenge for deep learning-based point cloud 
 Ilustration of the proposed framework. 
 </div>
 
+## 🔑 Setup
+The code has been tested on **Ubuntu** with **Python 3.10**, **PyTorch 2.4.0**, and **CUDA 12.1**. Furthermore, our environment requires very few libraries, so even lower versions of CUDA and Torch are acceptable. Configure the environment as follows.
+
+```
+# 1. Clone the repository
+git clone [https://github.com/Wangkkklll/AnyPcc.git](https://github.com/Wangkkklll/AnyPcc.git)
+cd AnyPcc
+
+# 2. Create and activate conda environment
+conda create -n anypcc python=3.10 -y
+conda activate anypcc
+
+# 3. Install PyTorch (CUDA 12.1)
+pip install torch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0 --index-url [https://download.pytorch.org/whl/cu121](https://download.pytorch.org/whl/cu121)
+
+# 4. Install specific dependencies directly via Git
+pip install git+[https://github.com/mit-han-lab/torchsparse.git](https://github.com/mit-han-lab/torchsparse.git)
+pip install git+[https://github.com/fraunhoferhhi/DeepCABAC.git](https://github.com/fraunhoferhhi/DeepCABAC.git)
+
+# 5. Install other requirements
+pip install torchac
+pip install -r requirements.txt
+```
+## 🧩 Dataset Preparation and Pretrained Model
+The training sets we used include 8iVFB, MVUB, KITTI, Ford, ScanNet, Thuman, and GausPcc-1K. Please refer to the training and testing config files for specific details. The dataset configurations and our custom datasets will be open-sourced in the future.
+
+Please refer to the following [Link](https://pan.baidu.com/s/1YAB4sbHxkOVEU5jOc2KxEg?pwd=875r) to obtain the pretrained models and dataset (soon).
+
+## 🚀 Running
+
+### Training
+```
+# train for lossless unified model
+script/train/ucm_u.sh
+# train for lossy model
+script/train/ucm_1stage_u.sh
+# other single model see the script/train
+```
+
+### Testing
+
+Before compression, all point clouds need to be quantized. Quantization parameters include `preprocess_scale`, `preprocess_shift`, and `posQ`. The quantization formula is `torch.round((xyz/preprocess_scale + preprocess_shift) / posQ)`.
+
+```
+# test for all dataset for lossless compression
+script/test/ucm_u_all.sh
+
+# test for dense point cloud for lossy compression
+script/test/ucm_u_lossy.sh
+
+# test for sparse point cloud for lossy compression
+script/test/ucm_u_all.sh (set posQ!=1 for Quantization lossy compression)
+
+# test for OOD data using IAFT
+script/test/ucm_u_tune.sh
+```
+
+### Compress and Decompress
+Please refer to the parameter settings in the compress_decompress.sh
+
+```
+script/test/compress_decompress.sh
+```
+
 
 ## 🔎 Contact
 If your have any comments or questions, feel free to contact [kangliwang@stu.pku.edu.cn](kangliwang@stu.pku.edu.cn).
 
+## 📘 Citation
+Please consider citing our work as follows if it is helpful and star our repo.
+```bibtex
+@article{wang2025anypcc,
+  title={AnyPcc: Compressing Any Point Cloud with a Single Universal Model},
+  author={Wang, Kangli and Yi, Qianxi and Ye, Yuqi and Li, Shihao and Gao, Wei},
+  journal={arXiv preprint arXiv:2510.20331},
+  year={2025}
+}
+```

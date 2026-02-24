@@ -1,0 +1,23 @@
+{
+  "datasets": [
+    {
+      "name": "kitti_train",
+      "type": "kitti",
+      "data_dirs": [
+        "/data2/wkl/pcc_data/sequences"
+      ],
+      "file_pattern": "**/velodyne/*.bin",
+      "posQ": 4,
+      "split_mode": "sequence_split",
+      "split_range": [
+        0,
+        10
+      ],
+      "sampling_weight": 2.5,
+      "preprocess_scale": 1000,
+      "use_patch": true,
+      "max_num": 200000,
+      "shift_range": 2.0
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "datasets": [
+    {
+      "name": "scannet_train",
+      "type": "scannet",
+      "data_dirs": [
+        "/data2/wkl/pcc_data/scannet/scans"
+      ],
+      "file_pattern": "**/*_vh_clean_2.ply",
+      "posQ": 1,
+      "max_samples": 2000,
+      "sampling_weight": 1.0,
+      "preprocess_scale": 50,
+      "use_patch": true,
+      "max_num": 200000,
+      "shift_range": 1.0
+    }
+  ]
+}

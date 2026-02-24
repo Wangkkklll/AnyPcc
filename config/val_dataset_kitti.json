@@ -1,0 +1,21 @@
+{
+  "datasets": [
+    {
+      "name": "kitti_val",
+      "type": "kitti",
+      "data_dirs": [
+        "/data2/wkl/pcc_data/sequences"
+      ],
+      "file_pattern": "**/velodyne/*.bin",
+      "is_pre_quantized": false,
+      "posQ": 4,
+      "split_mode": "sequence_split",
+      "split_range": [
+        11,
+        21
+      ],
+      "max_samples": 20,
+      "preprocess_scale": 1000
+    }
+  ]
+}

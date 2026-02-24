@@ -1,0 +1,19 @@
+{
+  "datasets": [
+    {
+      "name": "gs_train",
+      "type": "gs",
+      "data_dirs": [
+        "/data2/wkl/pcc_data/gs_pcc/trainset/quantized"
+      ],
+      "file_pattern": "*.ply",
+      "is_pre_quantized": true,
+      "posQ": 1,
+      "max_samples": 1000,
+      "sampling_weight": 2.0,
+      "use_patch": true,
+      "max_num": 100000,
+      "shift_range": 2.0
+    }
+  ]
+}

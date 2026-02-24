@@ -1,0 +1,16 @@
+{
+  "datasets": [
+    {
+      "name": "scannet_val",
+      "type": "scannet",
+      "data_dirs": [
+        "/data2/wkl/pcc_data/scannet/scans_test"
+      ],
+      "file_pattern": "**/*_vh_clean_2.ply",
+      "is_pre_quantized": false,
+      "posQ": 1,
+      "max_samples": 10,
+      "preprocess_scale": 50
+    }
+  ]
+}
