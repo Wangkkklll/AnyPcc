@@ -50,7 +50,7 @@ The code has been tested on **Ubuntu** with **Python 3.10**, **PyTorch 2.4.0**, 
 
 ```
 # 1. Clone the repository
-git clone [https://github.com/Wangkkklll/AnyPcc.git](https://github.com/Wangkkklll/AnyPcc.git)
+git clone https://github.com/Wangkkklll/AnyPcc.git
 cd AnyPcc
 
 # 2. Create and activate conda environment
@@ -58,11 +58,11 @@ conda create -n anypcc python=3.10 -y
 conda activate anypcc
 
 # 3. Install PyTorch (CUDA 12.1)
-pip install torch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0 --index-url [https://download.pytorch.org/whl/cu121](https://download.pytorch.org/whl/cu121)
+pip install torch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0 --index-url https://download.pytorch.org/whl/cu121
 
 # 4. Install specific dependencies directly via Git
-pip install git+[https://github.com/mit-han-lab/torchsparse.git](https://github.com/mit-han-lab/torchsparse.git)
-pip install git+[https://github.com/fraunhoferhhi/DeepCABAC.git](https://github.com/fraunhoferhhi/DeepCABAC.git)
+pip install git+https://github.com/mit-han-lab/torchsparse.git
+pip install git+https://github.com/fraunhoferhhi/DeepCABAC.git
 
 # 5. Install other requirements
 pip install torchac
