@@ -73,6 +73,7 @@ The training sets we used include 8iVFB, MVUB, KITTI, Ford, ScanNet, Thuman, and
 * KITTI : https://www.cvlibs.net/datasets/kitti/
 * 8iVFB : http://plenodb.jpeg.org/pc/8ilabs/
 * Owlii : https://mpeg-pcc.org/index.php/pcc-content-database/owlii-dynamic-human-textured-mesh-sequence-dataset/
+* ScanNet : https://github.com/ScanNet/ScanNet
 * MVUB : http://plenodb.jpeg.org/pc/microsoft/
 * GausPcc-1K : https://github.com/Wangkkklll/GausPcc
 * Thuman : https://github.com/ytrock/THuman2.0-Dataset (we use this mesh dataset and sample to 10-bit dense point cloud, some example can be found at our [Link](https://pan.baidu.com/s/1YAB4sbHxkOVEU5jOc2KxEg?pwd=875r).)
