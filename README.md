@@ -24,10 +24,9 @@
 ## 📣 News
 - [25-10-24] 🔥 We initially released the paper and project.
 - [26-02-21] 🔥 Congratulations on the acceptance of AnyPcc to CVPR 2026!
-- [26-02-24] 🔥 Complete training and testing code and pre-trained checkpoint of AnyPcc have been released. check it out！
+- [26-02-24] 🔥 Complete training and testing code and pre-trained checkpoint of AnyPcc have been released.
+- [26-03-03] 🔥 All dataset have been released.
 
-## Todo
-- Release all dataset
 
 ## Links
 Our work on point cloud or 3DGS compression has also been released. Welcome to check it.
@@ -69,9 +68,18 @@ pip install torchac
 pip install -r requirements.txt
 ```
 ## 🧩 Dataset Preparation and Pretrained Model
-The training sets we used include 8iVFB, MVUB, KITTI, Ford, ScanNet, Thuman, and GausPcc-1K. Please refer to the training and testing config files for specific details. The dataset configurations and our custom datasets will be open-sourced in the future.
+The training sets we used include 8iVFB, MVUB, KITTI, Ford, ScanNet, Thuman, and GausPcc-1K. Please refer to the training and testing config files for specific details.
+### Trainset
+* KITTI : https://www.cvlibs.net/datasets/kitti/
+* 8iVFB : http://plenodb.jpeg.org/pc/8ilabs/
+* Owlii : https://mpeg-pcc.org/index.php/pcc-content-database/owlii-dynamic-human-textured-mesh-sequence-dataset/
+* MVUB : http://plenodb.jpeg.org/pc/microsoft/
+* GausPcc-1K : https://github.com/Wangkkklll/GausPcc
+* Thuman : https://github.com/ytrock/THuman2.0-Dataset (we use this mesh dataset and sample to 10-bit dense point cloud, some example can be found at our [Link](https://pan.baidu.com/s/1YAB4sbHxkOVEU5jOc2KxEg?pwd=875r).)
+* Ford : This dataset can be found at our [Link](https://pan.baidu.com/s/1YAB4sbHxkOVEU5jOc2KxEg?pwd=875r).
+### Testset and Pretrained Model
 
-Please refer to the following [Link](https://pan.baidu.com/s/1YAB4sbHxkOVEU5jOc2KxEg?pwd=875r) to obtain the pretrained models and dataset (soon).
+Please refer to the following [Link](https://pan.baidu.com/s/1YAB4sbHxkOVEU5jOc2KxEg?pwd=875r) to obtain the pretrained models and dataset.
 
 ## 🚀 Running
 
