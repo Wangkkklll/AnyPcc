@@ -445,10 +445,10 @@ class AnyPcc_CoderIntra(nn.Module):
             else:
                 tuned_params_bytes = b''
             
-            num_layers = np.frombuffer(byte_stream[offset:offset+4], dtype=np.uint8)[0]
+            num_layers = np.frombuffer(byte_stream[offset:offset+1], dtype=np.uint8)[0]
             offset += 1
             
-            base_x_len = np.frombuffer(byte_stream[offset:offset+4], dtype=np.uint8)[0]
+            base_x_len = np.frombuffer(byte_stream[offset:offset+1], dtype=np.uint8)[0]
             offset += 1
             
             base_x_coords = np.frombuffer(byte_stream[offset:offset+base_x_len*3], dtype=np.uint8)
@@ -760,7 +760,9 @@ class AnyPcc_CoderIntra(nn.Module):
         # Point order may shift, sort to compare
         original_sorted = original_quantized[np.lexsort(original_quantized.T)]
         decompressed_sorted = decompressed_quantized[np.lexsort(decompressed_quantized.T)]
-        
+        # Remove duplicates for comparison
+        original_sorted = np.unique(original_sorted, axis=0)
+        decompressed_sorted = np.unique(decompressed_sorted, axis=0)
         num_points_match = original_sorted.shape[0] == decompressed_sorted.shape[0]
         
         if num_points_match:

@@ -27,7 +27,6 @@
 - [26-02-24] 🔥 Complete training and testing code and pre-trained checkpoint of AnyPcc have been released.
 - [26-03-03] 🔥 All dataset have been released.
 
-
 ## Links
 Our work on point cloud or 3DGS compression has also been released. Welcome to check it.
 - 🔥 [UniPCGC](https://uni-pcgc.github.io/) [AAAI'25]: A unified point cloud geometry compression. [[`Paper`](https://ojs.aaai.org/index.php/AAAI/article/view/33387)] [[`Arxiv`](https://arxiv.org/abs/2503.18541)] [[`Project`](https://uni-pcgc.github.io/)]
