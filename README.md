@@ -124,10 +124,11 @@ If your have any comments or questions, feel free to contact [kangliwang@stu.pku
 ## 📘 Citation
 Please consider citing our work as follows if it is helpful and star our repo.
 ```bibtex
-@article{wang2025anypcc,
+@inproceedings{wang2026anypcc,
   title={AnyPcc: Compressing Any Point Cloud with a Single Universal Model},
   author={Wang, Kangli and Yi, Qianxi and Ye, Yuqi and Li, Shihao and Gao, Wei},
-  journal={arXiv preprint arXiv:2510.20331},
-  year={2025}
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={2972--2982},
+  year={2026}
 }
 ```
