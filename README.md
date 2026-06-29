@@ -26,6 +26,7 @@
 - [26-02-21] 🔥 Congratulations on the acceptance of AnyPcc to CVPR 2026!
 - [26-02-24] 🔥 Complete training and testing code and pre-trained checkpoint of AnyPcc have been released.
 - [26-03-03] 🔥 All dataset have been released.
+- [26-06-29] 🔥 We have released AnyPcc-Fast, an optimized inference implementation of AnyPcc that achieves **2×–20× speedup** across different inference modes without performance degradation. See [`src_fast`](./src_fast/) for details.
 
 ## Links
 Our work on point cloud or 3DGS compression has also been released. Welcome to check it.
@@ -94,6 +95,8 @@ script/train/ucm_1stage_u.sh
 
 ### Testing
 
+Use the AnyPcc-Fast API for faster inference: Replace **src/test with src_fast/test**
+
 Before compression, all point clouds need to be quantized. Quantization parameters include `preprocess_scale`, `preprocess_shift`, and `posQ`. The quantization formula is `torch.round((xyz/preprocess_scale + preprocess_shift) / posQ)`.
 
 ```
@@ -109,6 +112,8 @@ script/test/ucm_u_all.sh (set posQ!=1 for Quantization lossy compression)
 # test for OOD data using IAFT
 script/test/ucm_u_tune.sh
 ```
+
+
 
 ### Compress and Decompress
 Please refer to the parameter settings in the compress_decompress.sh
