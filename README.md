@@ -80,7 +80,7 @@ The training sets we used include 8iVFB, MVUB, KITTI, Ford, ScanNet, Thuman, and
 * Ford : This dataset can be found at our [Link](https://pan.baidu.com/s/1YAB4sbHxkOVEU5jOc2KxEg?pwd=875r).
 ### Testset and Pretrained Model
 
-Please refer to the following [Link](https://pan.baidu.com/s/1YAB4sbHxkOVEU5jOc2KxEg?pwd=875r) to obtain the pretrained models and dataset.
+Please refer to the following [Baidu Pan](https://pan.baidu.com/s/1YAB4sbHxkOVEU5jOc2KxEg?pwd=875r) or [Huggingface](https://huggingface.co/datasets/wangkkklll/AnyPcc) to obtain the pretrained models and dataset.
 
 ## 🚀 Running
 
